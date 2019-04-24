@@ -1,4 +1,4 @@
-package com.tvd.splash_screen
+package com.tvd.splash_screen.activities
 
 import android.animation.Animator
 import android.content.Intent
@@ -10,6 +10,7 @@ import android.support.animation.SpringAnimation
 import android.support.animation.SpringForce
 import android.util.DisplayMetrics
 import android.view.animation.DecelerateInterpolator
+import com.tvd.splash_screen.R
 import kotlinx.android.synthetic.main.activity_splash.*
 
 class SplashActivity : AppCompatActivity() {
@@ -41,9 +42,7 @@ class SplashActivity : AppCompatActivity() {
                         .translationYBy(height)
                         .setListener(object : Animator.AnimatorListener {
                             override fun onAnimationRepeat(p0: Animator?) {
-
                             }
-
                             override fun onAnimationEnd(p0: Animator?) {
                                 val intent = Intent(applicationContext, MainActivity::class.java)
                                 finish()
